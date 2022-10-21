@@ -11,7 +11,7 @@ class Snake:
         self.speed = 10
         self.max_x = max_x
         self.max_y = max_y
-        self.direction = "right"
+        self.direction = ""
         self.length = 1
         self.body = []
         self.body.append((self.x, self.y))

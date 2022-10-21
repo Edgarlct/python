@@ -35,7 +35,11 @@ class Score:
         # get the scores from the csv file
         with open("scores.csv", "r") as file:
             reader = csv.reader(file)
+            next(reader)
             scores = list(reader)
+            # sort scores
+            scores = sorted(scores, key=lambda score: int(score[1]), reverse=True)
+            scores = scores[:10]
         return scores
 
     def draw_high_score(self, scores):
